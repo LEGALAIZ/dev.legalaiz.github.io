@@ -329,18 +329,20 @@ function add() {
 		Lampa.SettingsApi.addParam({
 			component: 'Multi_Menu_Component',
 			param: {
-				name: 'ANIME_fix',
+				name: 'mytorrents_fix',
 				type: 'trigger', //доступно select,input,trigger,title,static
 				default: false
 			},
 			field: {
-				name: 'Удалить "Аниме" в главном меню', //Название подпункта меню
+				name: 'Удалить "Торренты" в главном меню', //Название подпункта меню
 				description: '' //Комментарий к подпункту
 			},
 			onChange: function(value) {
 				//Действия при изменении подпункта
-				 if(Lampa.Storage.field('ANIME_fix') == true) $("[data-action=anime]").eq(0).hide();
-				 if(Lampa.Storage.field('ANIME_fix') == false) $("[data-action=anime]").eq(0).show();
+				 if(Lampa.Storage.field('mytorrents_fix') == true) $("[data-action=mytorrents]").eq(0).hide();
+				 if(Lampa.Storage.field('mytorrents_fix') == false) $("[data-action=mytorrents]").eq(0).show();
+				 //if(Lampa.Storage.field('ANIME_fix') == true) $("[data-action=anime]").eq(0).hide();
+				 //if(Lampa.Storage.field('ANIME_fix') == false) $("[data-action=anime]").eq(0).show();				 
 				 //Lampa.Settings.update();
 			}
 		});
@@ -400,7 +402,8 @@ function add() {
 		});
 /*	End СТИЛИЗАЦИЯ кнопок */
 
-if(Lampa.Storage.field('ANIME_fix') == true) $("[data-action=anime]").eq(0).hide();
+if(Lampa.Storage.field('mytorrents_fix') == true) $("[data-action=mytorrents]").eq(0).hide();
+//if(Lampa.Storage.field('ANIME_fix') == true) $("[data-action=anime]").eq(0).hide();
 if(Lampa.Storage.field('SISI_fix') == true) $("[data-action=sisi]").eq(0).show();
 var d = 'dn'; 
 
