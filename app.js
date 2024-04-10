@@ -31900,7 +31900,15 @@
             status: 1,
             name: 'skaztv_store.js (LOCAL)',
             author: '@lampa-liga'
-          });		  
+          });
+          console.log('PLUGIN', 'install Приятные мелочи (LOCAL)');
+          Plugins.add({
+            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
+            url: './plugins/tricks_new.js',
+            status: 1,
+            name: 'Приятные мелочи (LOCAL)',
+            author: '@lampa-liga'
+          });
         }
       }
     };
