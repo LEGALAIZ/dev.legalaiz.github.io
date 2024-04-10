@@ -733,7 +733,7 @@ var d = 'dn';
 		});
 /*End ТоррСервер */
 /* METRIKA */
-			(function(m, e, t, r, i, k, a) {
+/* 			(function(m, e, t, r, i, k, a) {
 				m[i] = m[i] || function() {
 					(m[i].a = m[i].a || []).push(arguments)
 				};
@@ -753,7 +753,7 @@ var d = 'dn';
 			});
 			var METRIKA = '<noscript><div><img src="https://mc.yandex.ru/watch/92135047" style="position:absolute; left:-9999px;" alt="" /></div></noscript>';
 			$('body').append(METRIKA);
-
+*/
 /* End METRIKA */		
 
 /*
