@@ -413,7 +413,7 @@ var d = 'dn';
 			param: {
 				name: 'Reloadbutton',
 				type: 'trigger', //доступно select,input,trigger,title,static
-				default: false
+				default: true
 			},
 			field: {
 				name: 'Добавить кнопку перезагрузки', //Название подпункта меню
