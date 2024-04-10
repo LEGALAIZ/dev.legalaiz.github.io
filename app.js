@@ -2025,7 +2025,9 @@
 
   var html$W = "<div class=\"error\">\n    <div class=\"error__ico\"></div>\n    <div class=\"error__body\">\n        <div class=\"error__title\">{title}</div>\n        <div class=\"error__text\">{text}</div>\n    </div>\n</div>\n\n<div class=\"torrent-error noconnect\">\n    <div>\n        <div>#{torent_nohash_reasons}</div>\n        <ul>\n            <li>#{torent_nohash_reason_one}</li>\n            <li>#{torent_nohash_reason_two}: {echo}</li>\n            <li>#{torent_nohash_reason_three}: <code>{url}</code></li>\n        </ul>\n    </div>\n\n    <div class=\"is--jackett\">\n        <div>#{torent_nohash_do}</div>\n        <ul>\n            <li>#{torent_nohash_do_one}</li>\n            <li>#{torent_nohash_do_two}</li>\n            <li>#{torent_nohash_do_three}</li>\n        </ul>\n    </div>\n\n    <div class=\"is--torlook\">\n        <div>#{torent_nohash_do}</div>\n        <ul>\n            <li>#{torent_nohash_do_four}</li>\n            <li>#{torent_nohash_do_five}</li>\n        </ul>\n    </div>\n</div>";
 
-  var html$V = "<div class=\"torrent-install\">\n    <div class=\"torrent-install__left\">\n        <img src=\"https://yumata.github.io/lampa/img/ili/tv.png\" class=\"torrent-install\"/>\n    </div>\n    <div class=\"torrent-install__details\">\n        <div class=\"torrent-install__title\">#{torrent_install_need}</div>\n        <div class=\"torrent-install__descr\">#{torrent_install_text}</div>\n        \n        <div class=\"torrent-install__label\">#{torrent_install_contact}</div>\n\n        <div class=\"torrent-install__links\">\n            <div class=\"torrent-install__link\">\n                <div>LG - Samsung</div>\n                <div>@lampa_group</div>\n            </div>\n\n            <div class=\"torrent-install__link\">\n                <div>Android</div>\n                <div>@lampa_android</div>\n            </div>\n        </div>\n    </div>\n</div>";
+  var html$V = "<div class=\"torrent-install\">\n    <div class=\"torrent-install__left\">\n        <img src=\"https://legalaiz.github.io/img/ili/tv.png\" class=\"torrent-install\"/>\n    </div>\n    <div class=\"torrent-install__details\">\n        <div class=\"torrent-install__title\">#{torrent_install_need}</div>\n        <div class=\"torrent-install__descr\">#{torrent_install_text}</div>\n        \n        <div class=\"torrent-install__label\">#{torrent_install_contact}</div>\n\n        <div class=\"torrent-install__links\">\n            <div class=\"torrent-install__link\">\n                <div>LG - Samsung</div>\n                <div>@lampa_group</div>\n            </div>\n\n            <div class=\"torrent-install__link\">\n                <div>Android</div>\n                <div>@lampa_android</div>\n            </div>\n        </div>\n    </div>\n</div>";
+  //var html$V = "<div class=\"torrent-install\">\n    <div class=\"torrent-install__left\">\n        <img src=\"https://yumata.github.io/lampa/img/ili/tv.png\" class=\"torrent-install\"/>\n    </div>\n    <div class=\"torrent-install__details\">\n        <div class=\"torrent-install__title\">#{torrent_install_need}</div>\n        <div class=\"torrent-install__descr\">#{torrent_install_text}</div>\n        \n        <div class=\"torrent-install__label\">#{torrent_install_contact}</div>\n\n        <div class=\"torrent-install__links\">\n            <div class=\"torrent-install__link\">\n                <div>LG - Samsung</div>\n                <div>@lampa_group</div>\n            </div>\n\n            <div class=\"torrent-install__link\">\n                <div>Android</div>\n                <div>@lampa_android</div>\n            </div>\n        </div>\n    </div>\n</div>";
+
 
   var html$U = "<div class=\"torrent-checklist\">\n    <div class=\"torrent-checklist__descr\">#{torrent_error_text}</div>\n\n    <div class=\"torrent-checklist__progress-steps\"></div>\n    <div class=\"torrent-checklist__progress-bar\">\n        <div style=\"width: 0\"></div>\n    </div>\n\n    <div class=\"torrent-checklist__content\">\n        <div class=\"torrent-checklist__steps\">\n            <ul class=\"torrent-checklist__list\">\n                <li>#{torrent_error_step_1}</li>\n                <li>#{torrent_error_step_2}</li>\n                <li>#{torrent_error_step_3}</li>\n                <li>#{torrent_error_step_4}</li>\n                <li>#{torrent_error_step_5}</li>\n                <li>#{torrent_error_step_6}</li>\n            </ul>\n        </div>\n\n        <div class=\"torrent-checklist__info\">\n            <div class=\"hide\">#{torrent_error_info_1}</div>\n            <div class=\"hide\">#{torrent_error_info_2}</div>\n            <div class=\"hide\">#{torrent_error_info_3}</div>\n            <div class=\"hide\">#{torrent_error_info_4}</div>\n            <div class=\"hide\">#{torrent_error_info_5}</div>\n            <div class=\"hide\">#{torrent_error_info_6}</div>\n            <div class=\"hide\">#{torrent_error_info_7}</div>\n        </div>\n    </div>\n\n    <div class=\"torrent-checklist__footer\">\n        <div class=\"simple-button selector\">#{torrent_error_start}</div><div class=\"torrent-checklist__next-step\"></div>\n    </div>\n</div>";
 
@@ -12448,7 +12450,8 @@
     Storage.listener.follow('change', function (event) {
       if (event.name == 'background' || event.name == 'background_type') resize();
     });
-    var u = Platform.any() ? 'https://yumata.github.io/lampa/' : './';
+    var u = Platform.any() ? 'https://legalaiz.github.io/' : './';
+    //var u = Platform.any() ? 'https://yumata.github.io/lampa/' : './';
     if (Platform.is('orsay')) {
       u = './';
     }
@@ -32122,7 +32125,8 @@
         old_css.remove();
       });
     } else if (old_css.length) {
-      Utils$2.putStyle(['https://yumata.github.io/lampa/css/app.css?v' + object$2.css_version], function () {
+        Utils$2.putStyle(['https://legalaiz.github.io/css/app.css?v' + object$2.css_version], function () {
+      //Utils$2.putStyle(['https://yumata.github.io/lampa/css/app.css?v' + object$2.css_version], function () {
         old_css.remove();
       });
     }
@@ -32405,7 +32409,8 @@
 
     var video_libs = ['hls/hls.js', 'dash/dash.js'];
     video_libs = video_libs.map(function (lib) {
-      return window.location.protocol == 'file:' ? 'https://yumata.github.io/lampa/vender/' + lib : './vender/' + lib;
+        return window.location.protocol == 'file:' ? 'https://legalaiz.github.io/vender/' + lib : './vender/' + lib;
+      //return window.location.protocol == 'file:' ? 'https://legalaiz.github.io/lampa/vender/' + lib : './vender/' + lib;
     });
     Utils$2.putScript(video_libs, function () {});
 
@@ -32540,7 +32545,8 @@
     };
     if (['ru', 'en'].indexOf(code) >= 0) call();else {
       $.ajax({
-        url: (location.protocol == 'file:' ? 'https://yumata.github.io/lampa/' : './') + 'lang/' + code + '.js',
+          url: (location.protocol == 'file:' ? 'https://legalaiz.github.io/' : './') + 'lang/' + code + '.js',
+        //url: (location.protocol == 'file:' ? 'https://yumata.github.io/lampa/' : './') + 'lang/' + code + '.js',
         dataType: 'text',
         timeout: 10000,
         success: function success(data) {
