@@ -331,7 +331,7 @@ function add() {
 			param: {
 				name: 'mytorrents_fix',
 				type: 'trigger', //доступно select,input,trigger,title,static
-				default: false
+				default: true
 			},
 			field: {
 				name: 'Удалить "Торренты" в главном меню', //Название подпункта меню
@@ -403,7 +403,6 @@ function add() {
 /*	End СТИЛИЗАЦИЯ кнопок */
 
 if(Lampa.Storage.field('mytorrents_fix') == true) $("[data-action=mytorrents]").eq(0).hide();
-$("[data-action=mytorrents]").eq(0).hide();
 //if(Lampa.Storage.field('ANIME_fix') == true) $("[data-action=anime]").eq(0).hide();
 if(Lampa.Storage.field('SISI_fix') == true) $("[data-action=sisi]").eq(0).show();
 var d = 'dn'; 
