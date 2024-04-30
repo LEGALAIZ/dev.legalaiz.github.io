@@ -31893,6 +31893,14 @@
             name: 'TMDB Proxy (L)',
             author: '@lampa-l'
           });
+          console.log('PLUGIN', 'install bylampa_addons.js (L)');
+          Plugins.add({
+            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
+            url: './plugins/bylampa_addons.js',
+            status: 0,
+            name: 'bylampa_addons.js (L)',
+            author: '@lampa-l'
+          });
           console.log('PLUGIN', 'install skaztv_store (L)');
           Plugins.add({
             //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
