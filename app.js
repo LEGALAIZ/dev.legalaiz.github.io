@@ -31885,29 +31885,29 @@
           return (a.url + '').indexOf('./plugin/tmdb-proxy.js') >= 0;
         });
         if (!ready) {
-          console.log('VPN', 'install TMDB Proxy (LOCAL)');
+          console.log('VPN', 'install TMDB Proxy (L)');
           Plugins.add({
             url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             //plugin/tmdb-proxyurl: './plugins/tmdb-proxy.js',
             status: 1,
-            name: 'TMDB Proxy (LOCAL)',
-            author: '@lampa-liga'
+            name: 'TMDB Proxy (L)',
+            author: '@lampa-l'
           });
-          console.log('PLUGIN', 'install skaztv_store (LOCAL)');
+          console.log('PLUGIN', 'install skaztv_store (L)');
           Plugins.add({
             //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/skaztv_store.js',
-            status: 1,
-            name: 'skaztv_store.js (LOCAL)',
-            author: '@lampa-liga'
+            status: 0,
+            name: 'skaztv_store.js (L)',
+            author: '@lampa-l'
           });
-          console.log('PLUGIN', 'install Приятные мелочи (LOCAL)');
+          console.log('PLUGIN', 'install Приятные мелочи (L)');
           Plugins.add({
             //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/tricks_new.js',
             status: 1,
-            name: 'Приятные мелочи (LOCAL)',
-            author: '@lampa-liga'
+            name: 'Приятные мелочи (L)',
+            author: '@lampa-l'
           });
         }
       }
@@ -31950,7 +31950,8 @@
     account_sync: true,
     plugins_use: true,
     plugins_store: true,
-    torrents_use: appletv ? false : true,
+    torrents_use: false,
+    //torrents_use: appletv ? false : true,
     white_use: false,
     lang_use: true,
     read_only: false,
