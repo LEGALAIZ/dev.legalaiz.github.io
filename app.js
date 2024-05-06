@@ -32600,4 +32600,4 @@ function () {
     checkReady();
   } else loadApp();
 
-} ;
+}) () ;
