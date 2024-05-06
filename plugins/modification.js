@@ -3,9 +3,9 @@
 	
     Lampa.Utils.putScriptAsync([
 //	    'https://legalaiz.github.io/plugins/bylampa_addons.js?v=' + Math.random(),
-	    './plugins/bylampa_addons.js?v=' + Math.random(),		
-		'./plugins/tricks_new.js?v=' + Math.random(),
-		'./plugins/hacktv.js?v=' + Math.random(),		
+//	    './plugins/bylampa_addons.js?v=' + Math.random(),		
+//		'./plugins/tricks_new.js?v=' + Math.random(),
+	//	'./plugins/hacktv.js?v=' + Math.random(),		
 //	    'https://bylampa.github.io/addon.js?v=' + Math.random(),
 //	    'http://lampa.run.place/themes.js?v=' + Math.random(),
 	    'https://bylampa.github.io/cub_off.js?v=' + Math.random()
