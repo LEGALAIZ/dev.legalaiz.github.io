@@ -25457,7 +25457,7 @@
   select$1('cloud_token', '', '');
   select$1('account_email', '', '');
   select$1('account_password', '', '');
-  select$1('device_name', '', 'Lampa');
+  select$1('device_name', '', 'Lampa-LIGA-TEST');
   select$1('player_nw_path', '', 'C:/Program Files/VideoLAN/VLC/vlc.exe');
   select$1('tmdb_proxy_api', '', '');
   select$1('tmdb_proxy_image', '', '');
@@ -31967,7 +31967,7 @@
     plugins_use: true,
     plugins_store: true,
     torrents_use: false,
-    //torrents_use: appletv ? false : true,
+    torrents_use: appletv ? false : true,
     white_use: false,
     lang_use: true,
     read_only: false,
@@ -32345,7 +32345,7 @@
         Layer.update();
       }
       if (e.name == 'keyboard_type') {
-        $('body').toggleClass('system--keyboard', Storage.field('keyboard_type') == 'lampa' ? false : true);
+        $('body').toggleClass('system--keyboard', Storage.field('keyboard_type') == 'lampa' ? true : false);
       }
     });
 
