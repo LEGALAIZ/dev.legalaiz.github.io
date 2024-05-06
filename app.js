@@ -31882,7 +31882,7 @@
         //ну это наш клиент
 
         var ready = Plugins.get().find(function (a) {
-          return (a.url + '').indexOf('./plugin/tmdb-proxy.js') >= 0;
+          return (a.url + '').indexOf('./plugin/tmdb-proxy') >= 0;
         });
         if (!ready) {
           console.log('PLUGIN', 'install Addons.js (L)');
@@ -31903,7 +31903,7 @@
           });
           console.log('VPN', 'install TMDB Proxy (L)');
           Plugins.add({
-            url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
+            url: 'https://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             //plugin/tmdb-proxyurl: './plugins/tmdb-proxy.js',
             status: 1,
             name: 'TMDB Proxy (L)',
