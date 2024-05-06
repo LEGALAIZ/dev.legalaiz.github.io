@@ -31901,6 +31901,14 @@
             name: 'HackTV (L)',
             author: '@lampa-l'
           });
+          console.log('PLUGIN', 'install Приятные мелочи (L)');
+          Plugins.add({
+            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
+            url: './plugins/tricks_new.js',
+            status: 1,
+            name: 'Приятные мелочи (L)',
+            author: '@lampa-l'
+          });
           console.log('VPN', 'install TMDB Proxy (L)');
           Plugins.add({
             url: 'https://' + object$2.cub_domain + '/plugin/tmdb-proxy',
