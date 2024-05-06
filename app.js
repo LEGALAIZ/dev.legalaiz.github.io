@@ -31885,20 +31885,12 @@
           return (a.url + '').indexOf('./plugin/tmdb-proxy.js') >= 0;
         });
         if (!ready) {
-          console.log('VPN', 'install TMDB Proxy (L)');
-          Plugins.add({
-            url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
-            //plugin/tmdb-proxyurl: './plugins/tmdb-proxy.js',
-            status: 1,
-            name: 'TMDB Proxy (L)',
-            author: '@lampa-l'
-          });
-          console.log('PLUGIN', 'install bylampa_addons.js (L)');
+          console.log('PLUGIN', 'install Addons.js (L)');
           Plugins.add({
             //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/bylampa_addons.js',
             status: 1,
-            name: 'bylampa_addons.js (L)',
+            name: 'Addons.js (L)',
             author: '@lampa-l'
           });
           console.log('PLUGIN', 'install HackTV (L)');
@@ -31909,20 +31901,20 @@
             name: 'HackTV (L)',
             author: '@lampa-l'
           });
+          console.log('VPN', 'install TMDB Proxy (L)');
+          Plugins.add({
+            url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
+            //plugin/tmdb-proxyurl: './plugins/tmdb-proxy.js',
+            status: 1,
+            name: 'TMDB Proxy (L)',
+            author: '@lampa-l'
+          });
           console.log('PLUGIN', 'install skaztv_store (L)');
           Plugins.add({
             //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/skaztv_store.js',
             status: 0,
             name: 'skaztv_store.js (L)',
-            author: '@lampa-l'
-          });
-          console.log('PLUGIN', 'install Приятные мелочи (L)');
-          Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
-            url: './plugins/tricks_new.js',
-            status: 1,
-            name: 'Приятные мелочи (L)',
             author: '@lampa-l'
           });
         }
@@ -31932,7 +31924,7 @@
       return (a.url + '').indexOf('plugin/tmdb-proxy') >= 0;
     });
     if (!installed) {
-      console.log('VPN', 'start install TMDB Proxy');
+      console.log('VPN', 'start install TMDB Proxy (L)');
       extract('https', install, function () {
         //может не работает https
 
@@ -32498,6 +32490,7 @@
           }, {
             name: Lang.translate('settings_param_yes'),
             onSelect: function onSelect() {
+              window.localStorage.setItem('remove_white_and_demo', 'true');
               window.location.reload();
             }
           }]
