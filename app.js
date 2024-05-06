@@ -25363,7 +25363,7 @@
   select$1('keyboard_type', {
     'lampa': '#{settings_param_keyboard_lampa}',
     'integrate': '#{settings_param_keyboard_system}'
-  }, 'lampa');
+  }, 'integrate');
   select$1('card_interfice_type', {
     'old': '#{settings_param_card_interface_old}',
     'new': '#{settings_param_card_interface_new}'
@@ -31882,12 +31882,11 @@
         //ну это наш клиент
 
         var ready = Plugins.get().find(function (a) {
-          return (a.url + '').indexOf('./plugin/tmdb-proxy.js') >= 0;
+          return (a.url + '').indexOf('./plugin/tmdb-proxy') >= 0;
         });
         if (!ready) {
           console.log('PLUGIN', 'install Addons.js (L)');
           Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/bylampa_addons.js',
             status: 1,
             name: 'Addons.js (L)',
@@ -31895,7 +31894,6 @@
           });
           console.log('PLUGIN', 'install HackTV (L)');
           Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/hacktv.js',
             status: 1,
             name: 'HackTV (L)',
@@ -31903,7 +31901,6 @@
           });
           console.log('PLUGIN', 'install Приятные мелочи (L)');
           Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/tricks_new.js',
             status: 1,
             name: 'Приятные мелочи (L)',
@@ -31917,19 +31914,11 @@
             name: 'TMDB Proxy (L)',
             author: '@lampa-l'
           });
-          console.log('PLUGIN', 'install skaztv_store (L)');
-          Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
-            url: './plugins/skaztv_store.js',
-            status: 0,
-            name: 'skaztv_store.js (L)',
-            author: '@lampa-l'
-          });
         }
       }
     };
     var installed = Plugins.get().find(function (a) {
-      return (a.url + '').indexOf('plugin/tmdb-proxy.js') >= 0;
+      return (a.url + '').indexOf('plugin/tmdb-proxy') >= 0;
     });
     if (!installed) {
       console.log('VPN', 'start install TMDB Proxy (L)');
@@ -32428,7 +32417,7 @@
 
     /** Включаем лайт версию если было включено */
 
-    $('body').toggleClass('light--version', Storage.field('light_version')).toggleClass('system--keyboard', Storage.field('keyboard_type') == 'lampa' ? false : true);
+    $('body').toggleClass('light--version', Storage.field('light_version')).toggleClass('system--keyboard', Storage.field('keyboard_type') == 'lampa' ? true : false);
 
     /** Добавляем hls и dash плагин */
 
@@ -32563,8 +32552,8 @@
   function loadLang() {
     var code = window.localStorage.getItem('language') || 'ru';
     var call = function call() {
-      /** Принудительно стартовать */
-      setTimeout(startApp, 1000 * 5);
+      /** Принудительно стартовать  Дефолтик=(1000 * 5) */
+      setTimeout(startApp, 2000 * 5);
 
       /** Загружаем плагины и стартуем лампу */
       Plugins.load(startApp);
