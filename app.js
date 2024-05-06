@@ -1,4 +1,4 @@
-(function () {
+function () {
   'use strict';
 
   if (!Object.assign) {
@@ -32600,4 +32600,4 @@
     checkReady();
   } else loadApp();
 
-})();
+} ;
