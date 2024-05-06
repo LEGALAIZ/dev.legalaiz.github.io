@@ -31881,10 +31881,10 @@
       if (country.trim() == 'RU') {
         //ну это наш клиент
 
-        var ready = Plugins.get().find(function (a) {
-          return (a.url + '').indexOf('./plugin/tmdb-proxy') >= 0;
-        });
-        if (!ready) {
+      //var ready = Plugins.get().find(function (a) {
+      //  return (a.url + '').indexOf('./plugin/tmdb-proxy') >= 0;
+      //});
+      //if (!ready) {
           console.log('PLUGIN', 'install Addons.js (L)');
           Plugins.add({
             url: './plugins/bylampa_addons.js',
@@ -31914,8 +31914,8 @@
             name: 'TMDB Proxy (L)',
             author: '@lampa-l'
           });
-        }
-      }
+      //}
+    //}
     };
     var installed = Plugins.get().find(function (a) {
       return (a.url + '').indexOf('plugin/tmdb-proxy') >= 0;
@@ -32119,7 +32119,8 @@
     /** Start - для orsay одни стили, для других другие */
     var old_css = $('link[href="css/app.css"]');
     if (Platform.is('orsay')) {
-      var urlStyle = 'http://lampa.mx/css/app.css?v';
+      var urlStyle = 'http://legalaiz.github.io/css/app.css?v';
+      //var urlStyle = 'http://lampa.mx/css/app.css?v';
       //Для нового типа виджета берем сохраненный адрес загрузки
       if (Orsay.isNewWidget()) {
         //Для фрейм загрузчика запишем полный url 
@@ -32553,7 +32554,7 @@
     var code = window.localStorage.getItem('language') || 'ru';
     var call = function call() {
       /** Принудительно стартовать  Дефолтик=(1000 * 5) */
-      setTimeout(startApp, 2000 * 5);
+      setTimeout(startApp, 1000 * 5);
 
       /** Загружаем плагины и стартуем лампу */
       Plugins.load(startApp);
