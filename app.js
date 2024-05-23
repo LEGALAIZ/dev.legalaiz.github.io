@@ -31893,9 +31893,15 @@
             name: 'Addons.js (L)',
             author: '@lampa-l'
           });
+          console.log('PLUGIN', 'install BWA-F (L)');
+          Plugins.add({
+            url: 'https://bwa.to?mod=f&conf=https://bwa.to/settings/cors.json',
+            status: 1,
+            name: 'BWA-F (L)',
+            author: '@lampa-l'
+          });
           console.log('PLUGIN', 'install HackTV (L)');
           Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/hacktv.js',
             status: 1,
             name: 'HackTV (L)',
@@ -31903,7 +31909,6 @@
           });
           console.log('PLUGIN', 'install Приятные мелочи (L)');
           Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/tricks_new.js',
             status: 1,
             name: 'Приятные мелочи (L)',
@@ -31912,7 +31917,6 @@
           console.log('VPN', 'install TMDB Proxy (L)');
           Plugins.add({
             url: 'https://' + object$2.cub_domain + '/plugin/tmdb-proxy',
-            //plugin/tmdb-proxyurl: './plugins/tmdb-proxy.js',
             status: 1,
             name: 'TMDB Proxy (L)',
             author: '@lampa-l'
