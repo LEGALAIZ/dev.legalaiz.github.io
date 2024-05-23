@@ -67,6 +67,8 @@
 	     Lampa.Storage.set('screensaver', 'false');
 	     Lampa.Storage.set('pages_save_total', '3');
 	     Lampa.Storage.set('NoTrailerMainPage', 'true');
+	     Lampa.Storage.set('Reloadbutton', 'true');
+	     Lampa.Storage.set('KeyboardSwitchOff', 'SwitchOff_UA');
     } 
 
 })();
