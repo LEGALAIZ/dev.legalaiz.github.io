@@ -31887,7 +31887,6 @@
         if (!ready) {
           console.log('PLUGIN', 'install Addons.js (L)');
           Plugins.add({
-            //url: 'http://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             url: './plugins/bylampa_addons.js',
             status: 1,
             name: 'Addons.js (L)',
@@ -31895,7 +31894,8 @@
           });
           console.log('PLUGIN', 'install BWA-F (L)');
           Plugins.add({
-            url: 'https://bwa.to?mod=f&conf=https://bwa.to/settings/cors.json',
+           // url: 'https://bwa.to?mod=f&conf=https://bwa.to/settings/cors.json',
+            url: 'https://bwa.to/f',
             status: 1,
             name: 'BWA-F (L)',
             author: '@lampa-l'
