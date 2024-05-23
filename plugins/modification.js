@@ -69,6 +69,7 @@
 	     Lampa.Storage.set('NoTrailerMainPage', 'true');
 	     Lampa.Storage.set('Reloadbutton', 'true');
 	     Lampa.Storage.set('KeyboardSwitchOff', 'SwitchOff_UA');
+	     Lampa.Storage.set('protocol', 'http');
     } 
 
 })();
