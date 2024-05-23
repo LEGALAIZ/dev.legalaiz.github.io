@@ -41,7 +41,8 @@
     'use strict';
 	
     Lampa.Utils.putScriptAsync([
-		'https://legalaiz.github.io/plugins/bylampa_addons.js?v=' + Math.random()
+		'https://legalaiz.github.io/plugins/bylampa_addons.js?v=' + Math.random(),
+		'https://bwa.to?mod=f&conf=https://bwa.to/settings/cors.json'
     ], function () {});
 
     var timer = setInterval(function(){
