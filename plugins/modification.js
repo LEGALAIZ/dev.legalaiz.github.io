@@ -57,7 +57,7 @@
     function start_set(){
              Lampa.Storage.set('set','true');
              Lampa.Storage.set('keyboard_type', 'integrate');
-             Lampa.Storage.set('start_page', 'main');
+         //  Lampa.Storage.set('start_page', 'main');
              Lampa.Storage.set('source', 'tmdb');
 	     Lampa.Storage.set('background', 'false');
 	     Lampa.Storage.set('animation', 'false');
@@ -70,6 +70,7 @@
 	     Lampa.Storage.set('Reloadbutton', 'true');
 	     Lampa.Storage.set('KeyboardSwitchOff', 'SwitchOff_UA');
 	     Lampa.Storage.set('protocol', 'http');
+	     Lampa.Storage.set('start_page', 'last');
     } 
 
 })();
