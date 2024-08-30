@@ -3,7 +3,8 @@
 
   var Defined = {
     api: 'lampac',
-    localhost: 'http://showy.online/',
+//  localhost: 'http://showy.online/',
+    localhost: 'https://showy.online/',
     apn: 'https://apn.watch/'
   };
 
@@ -38,7 +39,7 @@
       season: [],
       voice: []
     };
-    var balansers_with_search = ['eneyida', 'seasonvar', 'lostfilmhd', 'kinotochka', 'kinopub', 'kinoprofi', 'kinokrad', 'kinobase', 'filmix', 'redheadsound', 'animevost', 'animego', 'animedia', 'animebesst', 'anilibria', 'rezka', 'kodik'];
+    var balansers_with_search = ['seasonvar', 'lostfilmhd', 'kinotochka', 'kinopub', 'kinoprofi', 'kinokrad', 'kinobase', 'filmix', 'redheadsound', 'animevost', 'animego', 'animedia', 'animebesst', 'anilibria', 'rezka', 'kodik'];
 
     function account(url) {
       url = url + '';
