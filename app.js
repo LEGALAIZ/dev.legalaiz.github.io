@@ -31885,14 +31885,14 @@
           return (a.url + '').indexOf('./plugin/tmdb-proxy.js') >= 0;
         });
         if (!ready) {
-          console.log('PLUGIN', 'install Addons.js (L)');
+          console.log('Plugin', 'install Addons.js (L)');
           Plugins.add({
             url: './plugins/bylampa_addons.js',
             status: 1,
             name: 'Addons.js (L)',
             author: '@lampa-l'
           });
-          console.log('PLUGIN', 'install BWA-F (L)');
+          console.log('Plugin', 'install BWA-F (L)');
           Plugins.add({
            // url: 'https://bwa.to?mod=f&conf=https://bwa.to/settings/cors.json',
             url: 'https://bwa.to/f',
@@ -31900,14 +31900,14 @@
             name: 'BWA-F (L)',
             author: '@lampa-l'
           });
-          console.log('PLUGIN', 'install HackTV (L)');
+          console.log('Plugin', 'install HackTV (L)');
           Plugins.add({
             url: './plugins/hacktv.js',
             status: 1,
             name: 'HackTV (L)',
             author: '@lampa-l'
           });
-          console.log('PLUGIN', 'install Приятные мелочи (L)');
+          console.log('Plugin', 'install Приятные мелочи (L)');
           Plugins.add({
             url: './plugins/tricks_new.js',
             status: 1,
@@ -31915,6 +31915,7 @@
             author: '@lampa-l'
           });
           console.log('VPN', 'install TMDB Proxy (L)');
+          console.log('Plugin', 'install TMDB Proxy (L)');
           Plugins.add({
             url: 'https://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             status: 1,
@@ -32452,7 +32453,8 @@
     /** Start - активация режима GOD, жмем 🠔🠔 🠕🠕 🠖🠖 🠗🠗 */
 
     var mask = [37, 37, 38, 38, 39, 39, 40, 40],
-      psdg = -1;
+  //  psdg = -1;
+      psdg = 8; /** Добровольнопринудительный GOD */
     Keypad.listener.follow('keydown', function (e) {
       if (e.code == 37 && psdg < 0) {
         psdg = 0;
@@ -32469,7 +32471,8 @@
     /** Start - активация полной лампы, жмем 🠔🠔 🠕🠕 🠔🠔 🠕🠕 */
 
     var mask_full = [37, 37, 38, 38, 37, 37, 38, 38],
-      psdg_full = -1;
+  //  psdg_full = -1;
+      psdg_full = 8; /** Добровольнопринудительная активация полной лампы */
     Keypad.listener.follow('keydown', function (e) {
       if (e.code == 37 && psdg_full < 0) {
         psdg_full = 0;
