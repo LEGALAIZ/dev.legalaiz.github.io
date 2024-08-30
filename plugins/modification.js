@@ -69,12 +69,11 @@
 	     Lampa.Storage.set('NoTrailerMainPage', 'true');
 	     Lampa.Storage.set('Reloadbutton', 'true');
 	     Lampa.Storage.set('KeyboardSwitchOff', 'SwitchOff_UA');
-	     Lampa.Storage.set('protocol', 'http');
+	     Lampa.Storage.set('protocol', 'https');
 	     Lampa.Storage.set('start_page', 'last');
 	     Lampa.Storage.set('start_page', 'last');
 	     Lampa.Storage.set('God', 'enabled');
-             window.localStorage.God = enabled;
-             window.god_enabled = true;
+	     window.god_enabled = true;
 	     window.localStorage.setItem('remove_white_and_demo', 'true');
     } 
 
