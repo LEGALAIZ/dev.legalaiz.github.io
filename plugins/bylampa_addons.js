@@ -1374,7 +1374,7 @@ Lampa.SettingsApi.addComponent({
 							1:	'Установить',
 							2:	'Удалить',
                    				},
-					default: '1',
+					//default: '1',
                				},
 					field: {
                                   		name: 'SHOWY.ONLINE (L)',
