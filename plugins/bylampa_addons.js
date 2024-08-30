@@ -1920,15 +1920,15 @@ Lampa.SettingsApi.addComponent({
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('./plugins/tv.js', 'HackTV (L)', '@lampa-l', 'HackTV_(L)');
+							itemON('./plugins/hacktv.js', 'HackTV (L)', '@lampa-l', 'HackTV_(L)');
 						}
 						if (value == '2') {
-							var pluginToRemoveUrl = "./plugins/tv.js";
+							var pluginToRemoveUrl = "./plugins/hacktv.js";
 							deletePlugin(pluginToRemoveUrl);
 						}
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('./plugins/tv.js')
+						var myResult = checkPlugin('./plugins/hacktv.js')
 						setTimeout(function() {	
 							$('div[data-name="HackTV_(L)"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
