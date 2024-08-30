@@ -1349,7 +1349,8 @@ Lampa.SettingsApi.addComponent({
 					param: {
                                    		name: 'add_torrent_plugin',
                                    		type: 'static',
-                                   		default: true
+                                   	     // default: true
+                                                default: false
                            		},
 					field: {
                                    		name: icon_add_torrent_plugin
