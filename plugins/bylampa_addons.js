@@ -249,21 +249,23 @@ Lampa.SettingsApi.addComponent({
 		Lampa.SettingsApi.addParam({
 					component: 'add_interface_plugin',
 					param: {
-						name: 'Tricks',
+						name: 'Tricks_(L)',
 						type: 'select',
 						values: {
 							1:	'Установить',
 							2:	'Удалить',
 						},
-					default: '1',
+				//	default: '1',
 						},
 					field: {
-						name: 'Приятные мелочи',
+						name: 'Приятные мелочи (L)',
 						description: 'Плагин позволяет на выбор установить различные дополнения (скринсейверы, стилизация кнопок, стиль плеера, часы в плеере и т.п.)'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('./plugins/tricks_new.js', 'Приятные Мелочи', '@AndreyURL54-l', 'Tricks');
+							var pluginToRemoveUrl = "https://andreyurl54.github.io/diesel5/tricks.js";
+							deletePlugin(pluginToRemoveUrl);
+							itemON('./plugins/tricks_new.js', 'Приятные Мелочи (L)', '@lampa-l', 'Tricks_(L)');
 						}
 						if (value == '2') {
 							var pluginToRemoveUrl = "./plugins/tricks_new.js";
@@ -272,6 +274,45 @@ Lampa.SettingsApi.addComponent({
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900');  hideInstall()
 						var myResult = checkPlugin('./plugins/tricks_new.js')
+						setTimeout(function() {	
+							$('div[data-name="Tricks_(L)"]').append('<div class="settings-param__status one"></div>')
+							if (myResult) {
+								$('div[data-name="Tricks_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+							} else {
+								$('div[data-name="Tricks_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+							}
+						}, 100);			  
+					}
+		});
+
+		Lampa.SettingsApi.addParam({
+					component: 'add_interface_plugin',
+					param: {
+						name: 'Tricks',
+						type: 'select',
+						values: {
+							1:	'Установить',
+							2:	'Удалить',
+						},
+				//	default: '1',
+						},
+					field: {
+						name: 'Приятные мелочи',
+						description: 'Плагин позволяет на выбор установить различные дополнения (скринсейверы, стилизация кнопок, стиль плеера, часы в плеере и т.п.)'
+					},
+					onChange: function(value) {
+						if (value == '1') {
+							var pluginToRemoveUrl = "./plugins/tricks_new.js";
+							deletePlugin(pluginToRemoveUrl);
+							itemON('https://andreyurl54.github.io/diesel5/tricks.js', 'Приятные Мелочи', '@AndreyURL54', 'Tricks');
+						}
+						if (value == '2') {
+							var pluginToRemoveUrl = "https://andreyurl54.github.io/diesel5/tricks.js";
+							deletePlugin(pluginToRemoveUrl);
+						}	
+					},
+					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900');  hideInstall()
+						var myResult = checkPlugin('https://andreyurl54.github.io/diesel5/tricks.js')
 						setTimeout(function() {	
 							$('div[data-name="Tricks"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -282,7 +323,7 @@ Lampa.SettingsApi.addComponent({
 						}, 100);			  
 					}
 		});
-		
+
 		Lampa.SettingsApi.addParam({
 					component: 'add_interface_plugin',
 					param: {
@@ -1263,6 +1304,8 @@ Lampa.SettingsApi.addComponent({
 					},
                            		onChange: function(value) {
 					if (value == '1') {
+						var pluginToRemoveUrl = "https://bwa.to/f";
+						deletePlugin(pluginToRemoveUrl);
 						itemON('https://bwa.to/o', 'Онлайн BWA', '@rik', 'Онлайн_BWA');
 					}
 					if (value == '2') {
@@ -1282,6 +1325,46 @@ Lampa.SettingsApi.addComponent({
 						}, 100);			  
 					}
 		});
+
+		Lampa.SettingsApi.addParam({
+					component: 'add_online_plugin',
+					param: {
+                               			name: 'BWA-F_(L)',
+                   				type: 'select',
+                   				values: {
+							1:	'Установить',
+							2:	'Удалить',
+                   				},
+					//default: '1',
+               				},
+					field: {
+                                  		name: 'BWA-F (L)',
+                                  		description: 'Плагин для просмотра фильмов и сериалов в онлайн'
+					},
+                           		onChange: function(value) {
+					if (value == '1') {
+						var pluginToRemoveUrl = "https://bwa.to/o";
+						deletePlugin(pluginToRemoveUrl);
+						itemON('https://bwa.to/f', 'BWA-F (L)', '@lampa-l', 'BWA-F_(L)');
+					}
+					if (value == '2') {
+						var pluginToRemoveUrl = "https://bwa.to/f";
+						deletePlugin(pluginToRemoveUrl);
+					}
+                },
+					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
+						var myResult = checkPlugin('https://bwa.to/f')
+						setTimeout(function() {	
+							$('div[data-name="BWA-F_(L)"]').append('<div class="settings-param__status one"></div>')
+							if (myResult) {
+								$('div[data-name="BWA-F_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+							} else {
+								$('div[data-name="BWA-F_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+							}
+						}, 100);			  
+					}
+		});
+
 	        Lampa.SettingsApi.addParam({
 					component: 'add_online_plugin',
 					param: {
@@ -1292,6 +1375,7 @@ Lampa.SettingsApi.addComponent({
 							2:	'Удалить',
                    				},
 					//default: '1',
+					default: '1',
                				},
 					field: {
                                   		name: 'Showy',
