@@ -71,6 +71,7 @@
 	     Lampa.Storage.set('KeyboardSwitchOff', 'SwitchOff_UA');
 	     Lampa.Storage.set('protocol', 'http');
 	     Lampa.Storage.set('start_page', 'last');
+	     Lampa.Storage.set('God', 'enabled');
     } 
 
 })();
