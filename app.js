@@ -31885,14 +31885,14 @@
           return (a.url + '').indexOf('./plugin/tmdb-proxy.js') >= 0;
         });
         if (!ready) {
-          console.log('Plugin', 'install Addons.js (L)');
+          console.log('Plugins', 'install Addons.js (L)');
           Plugins.add({
             url: './plugins/bylampa_addons.js',
             status: 1,
             name: 'Addons.js (L)',
             author: '@lampa-l'
           });
-          console.log('Plugin', 'install BWA-F (L)');
+          console.log('Plugins', 'install BWA-F (L)');
           Plugins.add({
            // url: 'https://bwa.to?mod=f&conf=https://bwa.to/settings/cors.json',
             url: 'https://bwa.to/f',
@@ -31900,22 +31900,29 @@
             name: 'BWA-F (L)',
             author: '@lampa-l'
           });
-          console.log('Plugin', 'install HackTV (L)');
+          console.log('Plugins', 'install HackTV (L)');
           Plugins.add({
             url: './plugins/hacktv.js',
             status: 1,
             name: 'HackTV (L)',
             author: '@lampa-l'
           });
-          console.log('Plugin', 'install Приятные мелочи (L)');
+          console.log('Plugins', 'install Приятные мелочи (L)');
           Plugins.add({
             url: './plugins/tricks_new.js',
             status: 1,
             name: 'Приятные мелочи (L)',
             author: '@lampa-l'
           });
+          console.log('Plugins', 'install SHOWY.ONLINE (L)');
+          Plugins.add({
+            url: './plugins/m_new.js',
+            status: 1,
+            name: 'SHOWY.ONLINE (L)',
+            author: '@lampa-l'
+          });
           console.log('VPN', 'install TMDB Proxy (L)');
-          console.log('Plugin', 'install TMDB Proxy (L)');
+          console.log('Plugins', 'install TMDB Proxy (L)');
           Plugins.add({
             url: 'https://' + object$2.cub_domain + '/plugin/tmdb-proxy',
             status: 1,
