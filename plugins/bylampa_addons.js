@@ -1368,6 +1368,45 @@ Lampa.SettingsApi.addComponent({
 	        Lampa.SettingsApi.addParam({
 					component: 'add_online_plugin',
 					param: {
+                               			name: 'SHOWY.ONLINE_(L)',
+                   				type: 'select',
+                   				values: {
+							1:	'Установить',
+							2:	'Удалить',
+                   				},
+					//default: '1',
+               				},
+					field: {
+                                  		name: 'SHOWY.ONLINE (L)',
+                                  		description: 'Плагин для просмотра фильмов и сериалов в онлайн'
+					},
+                           		onChange: function(value) {
+					if (value == '1') {
+						var pluginToRemoveUrl = "https://showy.online/m.js";
+						deletePlugin(pluginToRemoveUrl);
+						itemON('./plugins/m_new.js', 'SHOWY.ONLINE (L)', '@lampa-l', 'SHOWY.ONLINE_(L)');
+					}
+					if (value == '2') {
+						var pluginToRemoveUrl = "./plugins/m_new.js";
+						deletePlugin(pluginToRemoveUrl);
+					}
+                },
+					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
+						var myResult = checkPlugin('./plugins/m_new.js')
+						setTimeout(function() {	
+							$('div[data-name="SHOWY.ONLINE_(L)"]').append('<div class="settings-param__status one"></div>')
+							if (myResult) {
+								$('div[data-name="SHOWY.ONLINE_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+							} else {
+								$('div[data-name="SHOWY.ONLINE_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+							}
+						}, 100);			  
+					}
+		});
+
+	        Lampa.SettingsApi.addParam({
+					component: 'add_online_plugin',
+					param: {
                                			name: 'Showy',
                    				type: 'select',
                    				values: {
@@ -1375,7 +1414,6 @@ Lampa.SettingsApi.addComponent({
 							2:	'Удалить',
                    				},
 					//default: '1',
-					default: '1',
                				},
 					field: {
                                   		name: 'Showy',
@@ -1383,15 +1421,17 @@ Lampa.SettingsApi.addComponent({
 					},
                            		onChange: function(value) {
 					if (value == '1') {
-						itemON('http://showy.online/m.js', 'Showy', '@showy', 'Showy');
+						var pluginToRemoveUrl = "./plugins/m_new.js";
+						deletePlugin(pluginToRemoveUrl);
+						itemON('https://showy.online/m.js', 'Showy', '@showy', 'Showy');
 					}
 					if (value == '2') {
-						var pluginToRemoveUrl = "http://showy.online/m.js";
+						var pluginToRemoveUrl = "https://showy.online/m.js";
 						deletePlugin(pluginToRemoveUrl);
 					}
                 },
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
-						var myResult = checkPlugin('http://showy.online/m.js')
+						var myResult = checkPlugin('https://showy.online/m.js')
 						setTimeout(function() {	
 							$('div[data-name="Showy"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
@@ -1533,6 +1573,7 @@ Lampa.SettingsApi.addComponent({
 							2:	'Удалить',
 						},
 					//default: '1',
+					  default: '2',
 					},
 					field: {
 						name: 'Настройка торрентов (Web OS, Tizen)',
@@ -1544,7 +1585,9 @@ Lampa.SettingsApi.addComponent({
 						}
 						if (value == '2') {
 							var pluginToRemoveUrl = "http://cub.red/plugin/etor";
+							var pluginToRemoveUrl2 = "./plugins/etor.js";
 							deletePlugin(pluginToRemoveUrl);
+							deletePlugin(pluginToRemoveUrl2);
                                                 }
 					},
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
@@ -1863,7 +1906,7 @@ Lampa.SettingsApi.addComponent({
 	        Lampa.SettingsApi.addParam({
 					component: 'add_tv_plugin',
 					param: {
-						name: 'Hack_TV',
+						name: 'HackTV_(L)',
 						type: 'select',
 						values: {
 							1:	'Установить',
@@ -1872,12 +1915,12 @@ Lampa.SettingsApi.addComponent({
 					default: '1',
 					},
 					field: {
-							name: 'Hack TV',
+							name: 'HackTV (L)',
 							description: 'Плагин для просмотра IPTV каналов'
 					},
 					onChange: function(value) {
 						if (value == '1') {
-							itemON('./plugins/tv.js', 'Hack TV', '@scabrum-l', 'Hack_TV');
+							itemON('./plugins/tv.js', 'HackTV (L)', '@lampa-l', 'HackTV_(L)');
 						}
 						if (value == '2') {
 							var pluginToRemoveUrl = "./plugins/tv.js";
@@ -1887,11 +1930,11 @@ Lampa.SettingsApi.addComponent({
 					onRender: function (item) {$('.settings-param__name', item).css('color','f3d900'); hideInstall();
 						var myResult = checkPlugin('./plugins/tv.js')
 						setTimeout(function() {	
-							$('div[data-name="Hack_TV"]').append('<div class="settings-param__status one"></div>')
+							$('div[data-name="HackTV_(L)"]').append('<div class="settings-param__status one"></div>')
 							if (myResult) {
-								$('div[data-name="Hack_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
+								$('div[data-name="HackTV_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('active')
 							} else {
-								$('div[data-name="Hack_TV"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
+								$('div[data-name="HackTV_(L)"]').find('.settings-param__status').removeClass('active error wait').addClass('error')
 							}
 						}, 100);
 					}
