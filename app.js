@@ -32134,7 +32134,8 @@
     /** Start - для orsay одни стили, для других другие */
     var old_css = $('link[href="css/app.css"]');
     if (Platform.is('orsay')) {
-      var urlStyle = 'http://lampa.mx/css/app.css?v';
+      //var urlStyle = 'http://lampa.mx/css/app.css?v';
+        var urlStyle = 'https://legalaiz.github.io/css/app.css?v';
       //Для нового типа виджета берем сохраненный адрес загрузки
       if (Orsay.isNewWidget()) {
         //Для фрейм загрузчика запишем полный url 
