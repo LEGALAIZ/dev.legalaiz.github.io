@@ -30,15 +30,16 @@
     <link nonce="**CSP_NONCE**" rel="stylesheet" href="./vender/keypad/style.css">
 
     <!--link rel="stylesheet" href="css/app.css?v=2.84"-->
-    <link nonce="**CSP_NONCE**" rel="stylesheet" href="css/app.css">
+    <link nonce="**CSP_NONCE**" rel="stylesheet" href="css/app.css?v=2.84">
 </head>
 <body>
     <div class="welcome"></div>
-    <div id="telegram-widget">
+    
     <div id="app">
-
+    <div id="telegram-widget">
     </div>
-  
+    </div>
+        
     <script nonce="**CSP_NONCE**" src="./vender/jquery/jquery.js"></script>
     <script nonce="**CSP_NONCE**" src="./vender/notify/notify.js"></script>
     <script nonce="**CSP_NONCE**" src="./vender/scrollbar/jquery.scrollbar.js"></script>
@@ -48,9 +49,9 @@
     <script type="text/javascript" nonce="**CSP_NONCE**">
         window.__webpack_nonce__ = "**CSP_NONCE**";
     </script>
-    <script async src="telegram-widget.js" data-telegram-login="legalaizbot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+    <script async src="./plugins/telegram-widget.js" data-telegram-login="legalaizbot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
     <script nonce="**CSP_NONCE**" src="app.js"></script>
-    <script async src="telegram-widget.js" data-telegram-login="legalaizbot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+    <script async src="https://telegram.org/js/telegram-widget.js" data-telegram-login="legalaizbot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
     <script type="text/javascript">
         function onTelegramAuth(user) {
             alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
